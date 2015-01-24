@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="25sp"
+    android:layout_margin="30sp"
+    android:background="@drawable/note_border"
+    android:weightSum="1"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/note_ntext_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text" />
+
+    <TextView
+        android:id="@+id/note_datetime_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:layout_gravity="right"
+        android:paddingTop="10sp" />
+</LinearLayout>

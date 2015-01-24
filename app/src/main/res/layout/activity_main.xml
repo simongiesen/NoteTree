@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- header section here: -->
+    <LinearLayout
+        android:id="@+id/header_linearlayout"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/notes_framelayout"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <!-- left header section here: -->
+        <LinearLayout
+            android:id="@+id/header_left_linearlayout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/category_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/select_a_category" />
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/category_textview" />
+        </LinearLayout>
+
+        <!-- right header section here: -->
+        <LinearLayout
+            android:id="@+id/header_right_linearlayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/parent_category_button"
+                android:src="@drawable/up_triangle"
+                android:layout_width="75dp"
+                android:layout_height="fill_parent" />
+
+            <Spinner
+                android:id="@+id/options_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- notes list section here: -->
+    <FrameLayout
+        android:id="@+id/notes_framelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <ListView
+            android:id="@+id/notes_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fffffbd3" />
+    </FrameLayout>
+</LinearLayout>
