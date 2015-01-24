@@ -25,7 +25,7 @@ public final class ErrorHandler
      */
     public static final void handle(String errorMessage) {
         System.err.println(errorMessage);
-        ErrorLogger.logError(errorMessage);
+        Log.wtf(ErrorHandler.ERROR_TAG, errorMessage);
     }
 
     /**
@@ -35,7 +35,6 @@ public final class ErrorHandler
     public static final void handle(Throwable e) {
         e.printStackTrace();
         Log.wtf(ErrorHandler.ERROR_TAG, e);
-        ErrorLogger.logError(e.getMessage());
     }
 
     /**
@@ -66,21 +65,5 @@ public final class ErrorHandler
             ErrorHandler.handle(databaseError);
         }
         System.exit(0);
-    }
-
-    /**
-     *
-     * @param errorMessage
-     */
-    public static final void test(String errorMessage) {
-        System.err.println(errorMessage);
-    }
-
-    /**
-     *
-     * @param e
-     */
-    public static final void test(Throwable e) {
-        System.out.println(e.getMessage());
     }
 }
